@@ -1,0 +1,21 @@
+# -*- coding: utf-8 -*-
+"""
+演示用订单与骑手数据
+"""
+
+# 订单数据：id、配送距离、地址
+demo_orders = [
+    {"id": "order_001", "distance": 800, "address": "A小区"},
+    {"id": "order_002", "distance": 1200, "address": "B商场"},
+    {"id": "order_003", "distance": 500, "address": "C写字楼"},
+    {"id": "order_004", "distance": 1500, "address": "D学校"},
+    {"id": "order_005", "distance": 900, "address": "E公园"},
+    {"id": "order_006", "distance": 600, "address": "F医院"},
+]
+
+# 骑手数据：id、姓名、当前位置
+demo_riders = [
+    {"id": "rider_01", "name": "张三", "location": "中心商圈"},
+    {"id": "rider_02", "name": "李四", "location": "西区路口"},
+    {"id": "rider_03", "name": "王五", "location": "东站广场"},
+]
