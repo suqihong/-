@@ -1,0 +1,40 @@
+# -*- coding: utf-8 -*-
+"""
+AutoSolver 智能配送调度Agent
+GitHub: https://github.com/yourname/AutoSolver-Dispatch-Agent
+"""
+
+from dispatch_agent import DispatchAgent
+from demo_data import demo_orders, demo_riders
+
+def print_result(result):
+    """格式化输出结果"""
+    print("=" * 50)
+    print("📦 AutoSolver 智能派单结果")
+    print("=" * 50)
+    print(f"✅ 总优化距离：{result['total_optimized_distance']} 米")
+    
+    print("\n🚴 骑手分配：")
+    for rider_id, orders in result["rider_assignments"].items():
+        print(f"  {rider_id}：{orders}")
+    
+    unassigned = result["unassigned_orders"]
+    if unassigned:
+        print(f"\n⚠️ 未分配订单：{unassigned}")
+    else:
+        print("\n✅ 所有订单分配完成！")
+    print("=" * 50)
+
+if __name__ == "__main__":
+    # 初始化AI调度Agent
+    agent = DispatchAgent()
+    
+    # 执行智能分配
+    res = agent.assign_orders(demo_orders, demo_riders)
+    
+    # 输出结果
+    print_result(res)
+    
+    # AI Agent自然语言调整规则演示
+    print("\n🔧 AI Agent 规则调整：")
+    print(agent.natural_adjust("时效优先，均衡派单"))
