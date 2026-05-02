@@ -1,0 +1,6 @@
+AutoSolver-Dispatch-Agent/
+├── main.py          # 项目主入口
+├── dispatch_agent.py # AI调度核心算法
+├── demo_data.py     # 演示数据
+├── requirements.txt # 依赖声明
+└── README.md        # GitHub说明文档
